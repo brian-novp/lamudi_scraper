@@ -19,7 +19,7 @@ def download_p( page_from=1, page_to=2, export_location='.'):
         for page_num in range(page_from, page_to+1):
             print('processing', f'https://www.lamudi.co.id/jual/jawa-tengah/surakarta-solo/rumah/?page={page_num}')
             page.goto(f'https://www.lamudi.co.id/jual/jawa-tengah/surakarta-solo/rumah/?page={page_num}', timeout=30000)
-            # time.sleep(random.randint(10, 20))
+            # time.sleep(random.randint(10, 20)) >> use only if needed as a buffer
             page.wait_for_load_state('domcontentloaded')
             time.sleep(random.randint(4, 12))
 
